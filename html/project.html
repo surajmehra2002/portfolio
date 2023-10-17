@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--for small display navbar social links-->
+    <title>Project | Suraj Portfolio</title>
+    <link rel="shortcut icon" href="../images/titlelogo.jpg" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/header_footer.css">
+    <link rel="stylesheet" href="../css/project.css">
+    <link rel="stylesheet" href="../css/mediaquery.css">
+    <link rel="stylesheet" href="../css/buttons.css">
+    
+</head>
+<body>
+    <nav class="navbar">
+        <h1><a style="color: white;text-decoration: none;" href="/">My Portfolio</a></h1>
+
+        <!---------------------- This nav 139 to 154 for lardge display ------------------------->
+        <ul class="nav-ul">
+            <li class="nav-li"><a class="nav-a" href="/">Home</a></li>
+            <li class="nav-li"><a class="nav-a" href="/about">About</a></li>
+            <li class="nav-li" id="nav-drop-down">
+                <button>Service's</button>
+                        <!------------------ drop services for lardge display ----------------->
+                <ul class="nav-drop-ul">
+                    <li class="nav-drop-li"><a onclick="alert('Oh Sorry! i about working on it')" class="nav-a" href="#">Frontend </a></li>
+                    <li class="nav-drop-li"><a onclick="alert('Oh Sorry! i about working on it')" class="nav-a" href="#">Backend </a></li>
+                    <li class="nav-drop-li"><a onclick="alert('Oh Sorry! i about working on it')" class="nav-a" href="#">Landing page</a></li>
+                    <li class="nav-drop-li"><a onclick="alert('Oh Sorry! i about working on it')" class="nav-a" href="#">Hosting </a></li>
+                </ul>
+            </li>
+            <li class="nav-li"><a class="nav-a" href="#">Projects</a></li>
+            <li class="nav-li"><a class="nav-a" href="/#myskill">experience</a></li>
+            <li class="nav-li"><a class="nav-a" href="/#contact">Contact us</a></li>
+        </ul>
+        <!--------------- when width less then 700px nav will 155 to 170 --------------->
+       <input id="click-check" style="display: none;" type="checkbox">
+        
+                <label for="click-check">
+                    <span id="click">&#8801</span>
+                </label>
+                <div class="nav-pop">
+                    <label for="click-check">
+                        <span id="click">x</span>
+                    </label>
+                    <div class="nav-pop-ele">
+                        <a class="pop-link" href="/">Home</a>
+                        <a class="pop-link" href="/about">About</a>
+                        <div><button onclick="moreService()" style="font-size: 25px; padding: 10px 0;" >Service's</button>
+                            <div id="nav-pop">
+                                <a class="nav-link" onclick="alert('I am working on it !')" href="#">Frontend</a>
+                                <a class="nav-link" onclick="alert('I am working on it !')" href="#">Backend</a>
+                                <a class="nav-link" onclick="alert('I am working on it !')" href="#">Hosting</a>
+                            </div>
+                            
+                        </div>
+                        <a class="pop-link" href="#">Projects</a>
+                       <a class="pop-link" href="/#myskill">experience</a>
+                        <a class="pop-link" href="/#contact">Contact us</a>
+                    </div>
+                    <div class="nav-social-link">
+                        <a href="https://www.facebook.com/profile.php?id=100023095325912" class="fa fa-facebook" target="_blank"></a>
+                        <a href="https://twitter.com/" class="fa fa-twitter" target="_blank"></a>
+                        <a href="https://www.instagram.com/surajmehra221/" class="fa fa-instagram" target="_blank"></a>
+                        <a href="https://www.linkedin.com/in/suraj-singh-967404239/" class="fa fa-linkedin" target="_blank"></a>
+                        <a href="https://www.youtube.com/channel/UCL1zYuKt7CIgT-ctPkf5wNA" class="fa fa-youtube" target="_blank"></a>
+                        <a href="https://github.com/" class="fa upwork" target="_blank"></a>
+                    </div>
+                </div>
+    </nav>
+    <div style="height: 69.2px;"></div>
+   <section>
+    <div class="blogs">
+        <div class="blog-area"><button onclick="showmore()"  class="blog-com"><span class="title-left">Incude copyable code in code</span><span class="fa title-right">&#xf107</span></h3></button>
+            <div style="display: none;" id="show-more">
+                <br><br><h4>Here is code for how to include or show your code to other with website also button will present for copy all code </h4><br>
+                <h4>This is CSS code ...</h4>
+                <div style="position: relative;">
+                    <textarea readonly name="" id="code1" cols="40" rows="15" class="textarea-sz">
+                        <style>
+                            *{
+                        padding: 0;
+                        margin: 0;
+                        box-sizing: border-box;
+                    }
+                    body{
+                        background-color: cadetblue;
+                    }
+                    
+                    .main-box{
+                        border-radius: 5px;
+                        max-width: 500px;
+                        margin: 10vh auto;  
+                        padding: 25px 25px;  
+                        background-color: rgb(200, 255, 237);
+                    }
+                    
+                    .btn-group{
+                        border: 2px solid rgb(156, 156, 156);
+                        display: flex;
+                        border-radius: 8px;
+                        flex-direction: column;
+                        /* align-items: center; */
+                        padding: 5px 5px;
+                    }
+                    .link-btn{
+                        padding: 5px 8px;
+                        text-decoration: none;
+                        color: black;
+                        font-weight: 700;
+                        font-family: Arial, Helvetica, sans-serif;
+                        
+                    }
+                    button{
+                        display: block;
+                        border: none;
+                        background: none;
+                        text-decoration: none;
+                        font-size: 17px;
+                        width: 100%;
+                        text-align: left;
+                        cursor: pointer;;  
+                        
+                    }
+                    #show-hide{
+                        display: none;
+                        flex-direction: column;
+                    }
+                    
+                    
+                    
+                        </style>    
+                
+
+                    </textarea>
+                    <button class="copy-code-btn" onclick="codecopy1()" id="btn1">Copy Codes</button>
+            </div>
+                        <br><br><br>
+
+                <h4>This is HTML code ...</h4>
+                <div style="position: relative;">
+                    <textarea readonly name="" id="code2" cols="40" rows="15" class="textarea-sz">
+                             
+                        
+                        <div class="intro">
+                            <div class="innerintro">
+
+                                <!-- this is textarea not textareaa -->
+                                <textareaa readonly name="" id="code" cols="40" rows="15">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dicta quos voluptas corporis odio hic a vitae delectus! Laboriosam optio officia sunt iste expedita minus amet, minima repellat qui commodi?</p>
+                                 </textareaa>
+                                <button onclick="codecopy()" id="btn">Copy Codes</button>
+                            </div>
+                        </div>
+                    
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </textarea>
+                    <button class="copy-code-btn" onclick="codecopy2()" id="btn2">Copy Codes</button>
+                </div>
+                        <br><br><br>
+
+                <h4>This is JS code ...</h4>
+                <div style="position: relative;">
+                    <textarea readonly name="" id="code3" cols="40" rows="15" class="textarea-sz">
+                           <!------------- javascript ---------->
+                    <script>
+                        let show_hide = document.getElementById('show-hide')
+                
+                        function showmore(){
+                        
+                            if(show_hide.style.display=='flex'){
+                                show_hide.style.display=' none'
+                            }
+                            else{
+                                show_hide.style.display='flex'
+                            }
+                        }
+                
+                    </script>   
+                    </textarea>
+                    <button class="copy-code-btn" onclick="codecopy3()" id="btn3">Copy Codes</button>
+                            </div>
+                        <br><br><br>
+
+
+                    
+
+             
+            </div>
+        </div>
+
+
+        <div class="blog-area"><button onclick="showmore1()"  class="blog-com"><span class="title-left">Send mail to gmail with validation </span><span class="fa title-right">&#xf107</span></h3></button>
+            <div style="display: none;" id="show-more-1">
+                <br><br><h4>Here is code for how to include or show code, that is how works when we click send button and sent email with validation.. </h4><br>
+                <h4>This is CSS code ...</h4>
+                <div style="position: relative;">
+                    <textarea readonly name="" id="code_sendmail1" cols="40" rows="15" class="textarea-sz">
+                        <style>
+                            .send-btn{
+                                width: 177px;
+                                background: #31ae01;
+                                border: none;
+                                padding: 13px;
+                                cursor: pointer;
+                            }
+                            .send-btn:hover{
+                                background: #50d31d;
+                            }
+                            .input-box{
+                                border: none;
+                                background: gainsboro;
+                                padding: 10px;
+                                width: 100%;
+                                max-width: 300px;
+                            }
+                             </style> 
+                
+
+                    </textarea>
+                    <button class="copy-code-btn" onclick="sendmailvalid_css()" id="btn_sendmail1">Copy Codes</button>
+            </div>
+                        <br><br><br>
+
+                <h4>This is in body tag from HTML code ...</h4>
+                <div style="position: relative;">
+                    <textarea readonly name="" id="code_sendmail2" cols="40" rows="15" class="textarea-sz">
+                             
+                        <div style="text-align: center;" >
+                            <div>
+                                <label >Enter Your Name</label><br>
+                                <input class="input-box" id="name" name="name" type="text">
+                            </div><br>
+                            <div>
+                                <label >Enter your email</label><br>
+                                <input class="input-box" id="email" name="email" type="email">
+                            </div><br>
+                            <div>
+                                <label >Enter mobile no.</label><br>
+                                <input class="input-box" id="number" name="number" type="number">
+                            </div><br>
+                            <div>
+                                <label >Your message</label><br>
+                                <input type="text" class="input-box" id="message" name="message" id=""  rows="9"></input>
+                            </div><br>
+                            <button onclick="sendemail()" class="send-btn">Send</button>
+                       </div>
+
+
+
+
+
+                    </textarea>
+                    <button class="copy-code-btn" onclick="sendmailvalid_html()" id="btn_sendmail2">Copy Codes</button>
+                </div>
+                        <br><br><br>
+
+                <h4>This is JS code ...</h4>
+                <div style="position: relative;">
+                    <textarea readonly name="" id="code_sendmail3" cols="40" rows="15" class="textarea-sz">
+                           <!------------- copy all this in head tag ---------->
+                           <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+                           <script type="text/javascript">
+                               (function(){
+                                  emailjs.init("Public_Key");//Public_Key..
+                               })();
+                            </script>
+                            <script>
+                               function sendemail () {
+                       
+                                   
+                                   if(document.getElementById("number").value==""||document.getElementById("name").value==""||document.getElementById("email").value ==""||document.getElementById("message").value ==""){
+                                       alert('please fill the form before submit !!')
+                                       if(document.getElementById("name").value==""){
+                                           document.getElementById("name").style.border='2px solid red'
+                                       }else{
+                                           document.getElementById("name").style.border='1px solid #ccc' 
+                                       }
+                                       if(document.getElementById("email").value ==""){
+                                           document.getElementById("email").style.border='2px solid red'
+                                       }else{
+                                           document.getElementById("email").style.border='1px solid #ccc' 
+                                       }
+                                       if(document.getElementById("number").value ==""){
+                                           document.getElementById("number").style.border='2px solid red'
+                                       }else{
+                                           document.getElementById("number").style.border='1px solid #ccc' 
+                                       }
+                                       if(document.getElementById("message").value ==""){
+                                           document.getElementById("message").style.border='2px solid red'
+                                       }else{
+                                           document.getElementById("message").style.border='1px solid #ccc' 
+                                       }
+                       
+                                   }
+                                   
+                                   else{
+                                       
+                                       var email = document.getElementById("email").value;
+                                       var emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                       
+                                       if(emailPattern.test(email)){
+                                           
+                       
+                                       
+                                           var templateParams = {
+                                               name: document.getElementById("name").value,
+                                               email: document.getElementById("email").value,
+                                               number: document.getElementById("number").value,
+                                               message: document.getElementById("message").value,
+                                       
+                                           };
+                       
+                               
+                                           emailjs.send('Service_Key', 'Template_Key', templateParams) //Service_Key  Template_Key   Parameter
+                                               .then((res)=>{
+                                                   alert('your sms sent successfully..')
+                                                   document.getElementById("name").value="" ;
+                                                   document.getElementById("email").value ="" ;
+                                                   document.getElementById("number").value ="" ;
+                                                   document.getElementById("message").value ="";
+                       
+                                                   document.getElementById("name").style.border='1px solid #ccc'
+                                                   document.getElementById("email").style.border='1px solid #ccc'
+                                                   document.getElementById("number").style.border='1px solid #ccc'
+                                                   document.getElementById("message").style.border='1px solid #ccc'
+                                               })
+                                               .catch((err)=>alert('failed..',err));
+                                                   name==""
+                                                   email==""
+                                                   number==""
+                                                   message==""
+                                           }
+                                           else{
+                                               alert('please enter valid email address.')
+                                               document.getElementById("email").style.color='red'
+                                               document.getElementById("email").style.border='1px solid red'
+                                               document.getElementById("message").style.border='1px solid #ccc' 
+                                               document.getElementById("name").style.border='1px solid #ccc' 
+                                               document.getElementById("number").style.border='1px solid #ccc' 
+                                           }
+                       
+                               }
+                               
+                               }
+                           </script>
+                    </textarea>
+                    <button class="copy-code-btn" onclick="sendmailvalid_js()" id="btn_sendmail3">Copy Codes</button>
+                            </div>
+                        <br><br><br>
+
+
+                    
+
+                        
+            </div>                    
+        </div>
+
+
+        <div class="blog-area"><button onclick="showmore2()"  class="blog-com"><span class="title-left">Express basic page for backend </span><span class="fa title-right">&#xf107</span></h3></button>
+            <div style="display: none;" id="show-more-2">
+            
+                <br><br><h4>Here is code for how to include or show express basic code, with the help of this code you can serve multple html pages in site can create localhost site.. </h4><br>
+                
+
+                <h4>This is backend code in node js ...</h4>
+                <div style="position: relative;">
+                    <textarea readonly name="" id="code_express2" cols="40" rows="15" class="textarea-sz">
+                             
+                        
+
+                        const express = require('express');
+
+                        const app = express();
+                        app.use(express.urlencoded()); //this is important when use mongoose
+
+                        const port = 80;
+
+                        app.get("/", (req, res)=>{
+                            res.sendFile(__dirname + '/index.html');
+                        });
+
+                        app.post('/',function(req, res){ 
+                            console.log(req.body)   
+                        });
+
+                        app.listen(port, ()=>{
+                            console.log(`the application started successfully on port ${port}`);
+                        });
+
+
+                    </textarea>
+                    <button class="copy-code-btn" onclick="express()" id="btn_express2">Copy Codes</button>
+                </div> <br><br><br>
+             
+                       
+            </div>
+        </div>
+
+
+        <div class="blog-area"><button onclick="showmore3()"  class="blog-com"><span class="title-left">Save datas in mongodb sample code </span><span class="fa title-right">&#xf107</span></h3></button>
+            <div style="display: none;" id="show-more-3">
+                
+                <br><br><h4>Here is code for how to save data from html page to mongodb  </h4><br><p><strong>Note:</strong>You should have an account in mongoose for doing this and also mongoose compass software should installed <a href="https://www.mongodb.com/try/download/compass" target="_blank">mongodb_software</a> </p><br>
+                
+
+                <h4>This is HTML code ...</h4>
+                <div style="position: relative;">
+                    <textarea readonly name="" id="code_mongodb2" cols="40" rows="15" class="textarea-sz">
+                             
+                        
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+    body { padding-top: 50px; }
+   
+  </style>
+</head>
+<body>
+ 
+  
+
+
+
+  <div class="container " >
+    <div class="jumbotron">
+
+
+      <h1 class="my-3">Sign Up</h1>
+
+      <form action="/" method="post" onsubmit="myFunction()"   >
+
+        <div class="form-floating">
+          <label for="floatingInput">User name</label>
+          <input type="text" id="username" name="username" class="form-control" placeholder="Enter your name" required>
+        </div>
+
+        <div class="form-floating">  
+          <label for="floatingInput">Email address</label>
+          <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com"required>
+        </div>
+
+        <div class="form-floating">
+          <label for="floatingPassword">Password</label>
+          <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password"required>
+        </div>
+
+          
+          <input  type="date" style="display: none" name="date" id="mdate">
+          <input type="time" style="display: none" name="time" id="mtime">
+        <button onclick="ctime()"class="btn btn-info my-4 mx-5" >submit</button>
+      </form>
+    </div>
+  </div>
+
+
+  
+
+
+    <script>
+      function ctime(){
+        const date = new Date();                              
+        
+        
+          var day = date.getDate(),
+          month = date.getMonth() + 1,
+          year = date.getFullYear(),
+          hour = date.getHours(),
+          min  = date.getMinutes();
+
+          month = (month < 10 ? "0" : "") + month;
+          day = (day < 10 ? "0" : "") + day;
+          hour = (hour < 10 ? "0" : "") + hour;
+          min = (min < 10 ? "0" : "") + min;
+
+          var today = year + "-" + month + "-" + day,
+          displayTime = hour + ":" + min; 
+          
+          document.getElementById("mdate").value =today;
+          document.getElementById("mtime").value =displayTime;
+          console.log(currentTime) 
+          console.log(typeof(currentTime));
+     
+      }
+      
+      function myFunction(){
+        var user =document.getElementById('username').value
+
+        alert(`Hi ${user} , you are signed up successfully..`)
+      }
+                                        
+    </script>
+</body>
+</html>
+
+                    </textarea>
+                    <button class="copy-code-btn" onclick="mongodb_html()" id="btn_mongodb2">Copy Codes</button>
+                </div>
+                        <br><br><br>
+
+                <h4>This is backend JS code not javascript code ...</h4>
+                <div style="position: relative;">
+                    <textarea readonly name="" id="code_mongodb3" cols="40" rows="15" class="textarea-sz">
+                           
+const express = require('express');
+const mongoose = require('mongoose');
+
+
+const app = express();
+
+// app.use(express.json());         
+app.use(express.urlencoded());
+
+
+const port = 80;
+
+app.get("/", (req, res)=>{
+    res.sendFile(__dirname + '/index.html');
+});
+
+const mydb = "mongodb+srv://codewithsuraj:surajsinghmehra@cluster0.yveoypo.mongodb.net/myproject"  
+mongoose.connect(mydb, { useNewUrlParser: true, useUnifiedTopology: true });
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error'));
+var KittySchema = new mongoose.Schema(
+    {login_information : Object}
+
+  );
+
+var documents = mongoose.model('user_authenticate', KittySchema);
+KittySchema.methods.speak= function(){
+    
+    console.log(req.body);
+  }
+
+app.post('/',function(req, res){ 
+    // console.log(req.body)   
+    var data = new documents({login_information:req.body});
+    data.save().then(()=>{
+        res.sendFile(__dirname + '/index.html');
+        // res.render("massage");
+    }).catch((err)=>{
+        console.log(err);
+    })
+    // 
+    });
+
+
+app.listen(port, ()=>{
+    console.log(`the application started successfully on port ${port}`);
+});
+
+                    </textarea>
+                    <button class="copy-code-btn" onclick="mongodb_js()" id="btn_mongodb3">Copy Codes</button>
+                            </div>
+                        <br><br><br>
+
+
+                    
+
+             
+            </div>
+
+            </div>
+        </div>
+
+
+
+
+        <div class="blog-area"><button onclick="showmore4()"  class="blog-com"><span class="title-left">Responsive navbar using html, css and js</span><span class="fa title-right">&#xf107</span></h3></button>
+            <div style="display: none;" id="show-more-4">
+
+                <br><br><h4>Here is code for how to make responsive navbar with html, css and js </h4><br>
+                
+
+                <h4>This is full html source code ...</h4>
+                <div style="position: relative;">
+                    <textarea readonly name="" id="code_resnav2" cols="40" rows="15" class="textarea-sz">
+                        
+                       <!-- booooooooooooody   => body    -->
+                       
+                       
+                        <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                            <title>Document</title>
+                            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                            <style>
+                                *{
+                                    padding: 0;
+                                    margin: 0;
+                                    box-sizing: border-box;
+                                    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                                }
+                        
+                                .navbar{
+                                    background-color: rgb(28, 28, 72);
+                                    padding: 20px 30px;
+                                    position: fixed;
+                                    width: 100%;
+                                    top: 0;
+                                    z-index: 10;
+                                }
+                                .nav-ul{
+                                    display: flex;
+                                    list-style: none;
+                                    float: right;
+                                }
+                                .navbar button{
+                                    background:none;
+                                    color: white;
+                                    border: none;
+                                    font-size:16px;
+                                    cursor: pointer;
+                                }
+                                /* in the li elements hover property will appliy */
+                                #nav-drop-down:hover{
+                                    .nav-drop-ul{
+                                        display: block;
+                                    }
+                                    .nav-drop-ul:hover{
+                                        display: block;
+                                    }
+                                }
+                                .navbar h1{
+                                    display: inline;
+                                    color: white;
+                                }
+                        
+                                .nav-li{
+                                    padding: 5px 15px;
+                                    
+                                }
+                                .navbar ul li a{
+                                    color: white;
+                                    text-decoration: none;
+                                }
+                                .nav-drop-ul {
+                                    display: none;
+                                    background-color: rgb(28, 28, 72);
+                                    padding: 10px;
+                                    position: absolute;
+                                    top: 27px;
+                                    left: 4px;
+                                    border-top: 2px solid white;
+                                    /* box-shadow: 0px -5px 7px 0px black; */
+                            }
+                                #click{
+                                    display:none ;
+                                    font-size: 40px;
+                                    color: white;
+                                }
+                                .nav-drop-li{
+                                    list-style: none;
+                                    margin: 12px 0;
+                                    width: 80px;
+                                }
+                                #nav-drop-down{
+                                    position: relative;
+                                }
+                                .nav-a:hover{
+                                    color: blue;
+                                }
+                        
+                                .nav-pop {
+                                    bottom: -90vh;
+                                    position: absolute;
+                                    background-color: #2d4265;
+                                    width: -webkit-fill-available;
+                                    top: 0;
+                                    left: 0;
+                                    z-index: 50;
+                                    /* display: none; */
+                                    height: -webkit-fill-available;
+                                    margin: 25px 25px;
+                                    padding: 25px 25px;
+                                    border-radius: 8px;
+                                    scale: 0;
+                                    transition: all .2s ease-out;
+                                }
+                        
+                        
+                                #click-check:checked~.nav-pop{
+                                    overflow: hidden;;
+                                    scale: 1;        
+                                }
+                                .nav-pop-ele{
+                                    display: flex;
+                                    flex-direction: column;
+                                    width: 50%;
+                                    margin: auto;
+                                    align-items: center;
+                                    justify-content: center;
+                                    /* height: -webkit-fill-available; */
+                        
+                                }
+                                #nav-pop{
+                                    display: none;
+                                    flex-direction: column;
+                                }
+                                .pop-link {
+                                    padding: 10px 0px;
+                                    color: white;
+                                    text-decoration: none;
+                                    font-size: 25px;
+                                }
+                                .main-sec{
+                                    background-color: rgb(0, 0, 0);
+                                    height: 150vh;
+                                    position: relative;
+                                }
+                        
+                                .main-sec::before{
+                                    content: '';
+                                    background: url(https://www.i-exceed.com/wp-content/uploads/2020/07/bnrW-1.jpg);
+                                    background-attachment: fixed;
+                                    background-repeat: no-repeat;
+                                    background-size: cover;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    opacity:.5;
+                                    background-position: 0 0;
+                                    
+                                }
+                                
+                                .nav-link{
+                                    text-decoration: none;
+                                    color: #b7b7b7;
+                                    font-size: 19px;
+                                    padding: 5px 0;
+                                }
+                                .nav-social-link{
+                                    position: absolute;
+                                    bottom: 20px;
+                                    z-index: 10;
+                                    left: 0;
+                            right: 0;
+                            text-align: center;
+                                }
+                                .fa {
+                                    padding: 12px;
+                                    font-size: 20px;
+                                    width: 45px;
+                                    text-align: center;
+                                    text-decoration: none;
+                                    margin: 5px 2px;
+                        }
+                        
+                        .fa:hover {
+                            opacity: 0.7;
+                        }
+                        
+                        .fa-facebook {
+                          background: #3B5998;
+                          color: white;
+                        }
+                        
+                        .fa-twitter {
+                          background: #55ACEE;
+                          color: white;
+                        }
+                        
+                        .fa-instagram {
+                          background:  #125688;
+                          color: white;
+                        }
+                        
+                        .fa-linkedin {
+                          background: #007bb5;
+                          color: white;
+                        }
+                        
+                        .fa-youtube {
+                          background: #bb0000;
+                          color: white;
+                        }
+                        .upwork{
+                            background-color: #55ACEE;
+                            width: 45px;
+                            color: white;
+                        }
+                        .upwork::before{
+                            content: "\f09b";
+                        }
+                        
+                        
+                        
+                        
+                                @media screen and (max-width: 700px){
+                        
+                                    .main-sec::before {    
+                                            background-position: -625px 0;
+                                        }
+                                    #click {
+                                    display: inline-block;
+                                    margin: -25px;
+                                    float: right;
+                                    padding-right: 20px;
+                                    padding-top: 7px;
+                                    }
+                        
+                                    .nav-ul{
+                                        display: none;
+                                    }
+                        
+                                }
+                        
+                            </style>
+                        </head>
+                        <boooooooooooooody>
+                            <nav class="navbar">
+                                <h1>My Portfolio</h1>
+                        
+                                <!---------------------- This nav 139 to 154 for lardge display ------------------------->
+                                <ul class="nav-ul">
+                                    <li class="nav-li"><a class="nav-a" href="#">Home</a></li>
+                                    <li class="nav-li"><a class="nav-a" href="#">About</a></li>
+                                    <li class="nav-li" id="nav-drop-down">
+                                        <button>Service's</button>
+                                                <!------------------ drop services for lardge display ----------------->
+                                        <ul class="nav-drop-ul">
+                                            <li class="nav-drop-li"><a class="nav-a" href="#">service-1</a></li>
+                                            <li class="nav-drop-li"><a class="nav-a" href="#">service-2</a></li>
+                                            <li class="nav-drop-li"><a class="nav-a" href="#">service-3</a></li>
+                                            <li class="nav-drop-li"><a class="nav-a" href="#">service-4</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-li"><a class="nav-a" href="#">Projects</a></li>
+                                    <li class="nav-li"><a class="nav-a" href="#">Contact us</a></li>
+                                </ul>
+                                <!--------------- when width less then 700px nav will 155 to 170 --------------->
+                               <input id="click-check" style="display: none;" type="checkbox">
+                                
+                                        <label for="click-check">
+                                            <span id="click">&#8801</span>
+                                        </label>
+                                        <div class="nav-pop">
+                                            <label for="click-check">
+                                                <span id="click">x</span>
+                                            </label>
+                                            <div class="nav-pop-ele">
+                                                <a class="pop-link" href="#">Home</a>
+                                                <a class="pop-link" href="##">About</a>
+                                                <div><button onclick="moreService()" style="font-size: 25px; padding: 10px 0;" >Service's</button>
+                                                    <div id="nav-pop">
+                                                        <a class="nav-link" href="###">Service's</a>
+                                                        <a class="nav-link" href="####">Service's</a>
+                                                        <a class="nav-link" href="####">Service's</a>
+                                                        <a class="nav-link" href="#2">Service's</a>
+                                                        <a class="nav-link" href="#3">Service's</a>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <a class="pop-link" href="#4">Projects</a>
+                                                <a class="pop-link" href="#1">Contact us</a>
+                                            </div>
+                                            <div class="nav-social-link">
+                                                <a href="#" class="fa fa-facebook"></a>
+                                                <a href="#" class="fa fa-twitter"></a>
+                                                <a href="#" class="fa fa-instagram"></a>
+                                                <a href="#" class="fa fa-linkedin"></a>
+                                                <a href="#" class="fa fa-youtube"></a>
+                                                <a href="#" class="fa upwork"></a>
+                                            </div>
+                                        </div>
+                            </nav>
+                        
+                            <section class="main-sec">
+                        
+                            </section>
+                            <div style="background-color: black; height: 10vh;"></div>
+                        
+                            <script>
+                                
+                                function moreService(){
+                                    let nav_pop = document.getElementById('nav-pop');
+                                    if(nav_pop.style.display=='flex'){
+                                        nav_pop.style.display='none'
+                                    }
+                                    else{
+                                        nav_pop.style.display='flex'
+                                    }
+                                }
+                            </script>
+                        
+                        </boooooooooooooody>
+                        </html>
+                                  
+                        
+
+                     
+                    </textarea>
+                    <button class="copy-code-btn" onclick="responsive_nav()" id="btn_resnav2">Copy Codes</button>
+                </div> <br><br><br>
+
+            </div>
+        </div>
+
+
+        <div class="blog-area"><button onclick="showmore5()"  class="blog-com"><span class="title-left">Text changes animation using css </span><span class="fa title-right">&#xf107</span></h3></button>
+            <div style="display: none;" id="show-more-5">
+                <br><br><h4>Here is code for changing automatically text in single line  </h4><br>
+                
+
+                <h4>This is backend code in node js ...</h4>
+                <div style="position: relative;">
+                    <textarea readonly name="" id="code_textanimation2" cols="40" rows="15" class="textarea-sz">
+                             
+                        
+                        <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                            <title>Document</title>
+                            <style>
+                                *{
+                                    margin: 0;
+                                    padding: 0;
+                                    box-sizing: border-box;
+                                    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+                                    }
+                                    body{
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        min-height: 100vh;
+                                        background-color: rgb(44, 65, 75);
+                                    }
+                                    .wrapper{
+                                        display: inline-flex;
+                                    }
+                                    .wrapper .static{
+                                        font-size: 60px;
+                                        font-weight: 400;
+                                        color: white;
+                                    }
+                                    .wrapper .dynamic{
+                                        height: 80px;
+                                        line-height: 80px;
+                                        margin-left: 15px;
+                                        overflow: hidden;
+                                    }
+                                    .wrapper .dynamic li{
+                                        font-size: 60px;
+                                        font-weight: 500;
+                                        list-style: none;
+                                        color: gold;
+                                        position: relative;
+                                        top: 0;
+                                        animation: word 6s steps(4) infinite;
+                        
+                                        }
+                                        @keyframes word {
+                                            100%{
+                                                top: -320px;
+                                            }
+                                        }
+                                    .dynamic li span{
+                                        position: relative;
+                                    }
+                                    .dynamic li span::after{
+                                        content: '';
+                                        position: absolute;
+                                        left: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                        border-left: 2px solid gold;
+                                        background:rgb(44, 65, 75) ;
+                                        animation: typing 1.5s steps(15) infinite;
+                        
+                                    }
+                                    @keyframes typing {
+                                        100%{
+                                            left: 100% ;
+                                            margin: 0 -35px 0 35px;
+                                        }
+                                    }
+                            </style>
+                        </head>
+                        <body>
+                            <div class="wrapper">
+                                <div class="static">hello I'm a</div>
+                                <ul class="dynamic">
+                                    <li><span>Youtuber</span></li>
+                                    <li><span>Designer</span></li>
+                                    <li><span>Developer</span></li>
+                                    <li><span>Freelancer</span></li>
+                                </ul>
+                            </div>
+                        </body>
+                        </html>
+
+
+                    </textarea>
+                    <button class="copy-code-btn" onclick="textanimation()" id="btn_textanimation2">Copy Codes</button>
+                </div> <br><br><br>
+             
+            </div>
+        </div>
+       
+        
+    </div>
+   </section> 
+   <script>
+    
+     function showmore(){
+        let showmore = document.getElementById('show-more')
+        if(showmore.style.display == "none"){
+            
+            showmore.style.display = "block";
+            showmore.classList.add('animate');
+            setTimeout(() => {
+                showmore.classList.remove('animate');
+            }, 500);
+        }
+        
+        else{          
+            showmore.style.display = "none";
+        }
+        
+    }
+    function codecopy1(){
+        let btn = document.getElementById('btn1')
+        let code = document.getElementById('code1');
+        code.select();
+        document.execCommand('copy');
+        btn.innerHTML='Codes copied'
+    }
+    function codecopy2(){
+        let btn = document.getElementById('btn2')
+        let code = document.getElementById('code2');
+        code.select();
+        document.execCommand('copy');
+        
+        btn.innerHTML='Codes copied'
+    }
+    function codecopy3(){
+        let btn = document.getElementById('btn3')
+        let code = document.getElementById('code3');
+        code.select();
+        document.execCommand('copy');
+        btn.innerHTML='Codes copied'
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function showmore1(){
+        let showmore = document.getElementById('show-more-1')
+        // alert(showmore.style.display)
+        if(showmore.style.display == "none"){
+
+            showmore.style.display = "block";
+            showmore.classList.add('animate');
+            setTimeout(() => {
+                showmore.classList.remove('animate');
+            }, 500);
+        }
+
+        else{
+            showmore.style.display = "none";
+            
+        }
+
+        }
+        function sendmailvalid_css(){
+            let btn = document.getElementById('btn_sendmail1')
+            let code = document.getElementById('code_sendmail1');
+            code.select();
+            document.execCommand('copy');
+            btn.innerHTML='Codes copied'
+        }
+        function sendmailvalid_html(){
+            let btn = document.getElementById('btn_sendmail2')
+            let code = document.getElementById('code_sendmail2');
+            code.select();
+            document.execCommand('copy');
+            
+            btn.innerHTML='Codes copied'
+        }
+        function sendmailvalid_js(){
+            let btn = document.getElementById('btn_sendmail3')
+            let code = document.getElementById('code_sendmail3');
+            code.select();
+            document.execCommand('copy');
+            btn.innerHTML='Codes copied'
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+     function showmore2(){
+        let showmore = document.getElementById('show-more-2')
+        // alert(showmore.style.display)
+        if(showmore.style.display == "none"){
+
+            showmore.style.display = "block";
+            showmore.classList.add('animate');
+            setTimeout(() => {
+                showmore.classList.remove('animate');
+            }, 500);
+        }
+
+        else{
+            showmore.style.display = "none";
+            showmore.classList.add('unanimate');
+            setTimeout(() => {
+                showmore.classList.remove('unanimate');
+            }, 500);
+        }
+
+     }
+     
+        function express(){
+            let btn = document.getElementById('btn_express2')
+            let code = document.getElementById('code_express2');
+            code.select();
+            document.execCommand('copy');
+            
+            btn.innerHTML='Codes copied'
+        }
+        
+
+
+
+
+
+
+
+
+
+
+     function showmore3(){
+        let showmore = document.getElementById('show-more-3')
+        // alert(showmore.style.display)
+        if(showmore.style.display == "none"){
+
+            showmore.style.display = "block";
+            showmore.classList.add('animate');
+            setTimeout(() => {
+                showmore.classList.remove('animate');
+            }, 500);
+        }
+
+        else{
+            showmore.style.display = "none";
+            showmore.classList.add('unanimate');
+            setTimeout(() => {
+                showmore.classList.remove('unanimate');
+            }, 500);
+        }
+
+
+    }
+   
+    function mongodb_html(){
+        let btn = document.getElementById('btn_mongodb2')
+        let code = document.getElementById('code_mongodb2');
+        code.select();
+        document.execCommand('copy');
+        
+        btn.innerHTML='Codes copied'
+    }
+    function mongodb_js(){
+        let btn = document.getElementById('btn_mongodb3')
+        let code = document.getElementById('code_mongodb3');
+        code.select();
+        document.execCommand('copy');
+        btn.innerHTML='Codes copied'
+    }
+
+
+
+
+
+
+
+     function showmore4(){
+        let showmore = document.getElementById('show-more-4')
+        // alert(showmore.style.display)
+        if(showmore.style.display == "none"){
+
+            showmore.style.display = "block";
+            showmore.classList.add('animate');
+            setTimeout(() => {
+                showmore.classList.remove('animate');
+            }, 500);
+        }
+
+        else{
+            showmore.style.display = "none";
+            showmore.classList.add('unanimate');
+            setTimeout(() => {
+                showmore.classList.remove('unanimate');
+            }, 500);
+        }
+    }
+        function responsive_nav(){
+            let btn = document.getElementById('btn_resnav2');
+            let code = document.getElementById('code_resnav2');
+            code.select();
+            document.execCommand('copy');
+            
+            btn.innerHTML='Codes copied'
+        }
+
+
+
+
+
+
+
+
+     
+     function showmore5(){
+        let showmore = document.getElementById('show-more-5')
+        // alert(showmore.style.display)
+        if(showmore.style.display == "none"){
+
+            showmore.style.display = "block";
+            showmore.classList.add('animate');
+            setTimeout(() => {
+                showmore.classList.remove('animate');
+            }, 500);
+        }
+
+        else{
+            showmore.style.display = "none";
+            showmore.classList.add('unanimate');
+            setTimeout(() => {
+                showmore.classList.remove('unanimate');
+            }, 500);
+        }
+
+     }
+     function textanimation(){
+            let btn = document.getElementById('btn_textanimation2');
+            let code = document.getElementById('code_textanimation2');
+            code.select();
+            document.execCommand('copy');
+            
+            btn.innerHTML='Codes copied'
+        }
+
+        
+
+
+   </script>
+</body>
+</html>

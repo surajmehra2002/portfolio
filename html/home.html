@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Suraj Portfolio</title>
+    <link rel="shortcut icon" href="../images/titlelogo.jpg" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--for small display navbar social links-->
+    <link rel="stylesheet" href="../css/header_footer.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/mediaquery.css">
+    <link rel="stylesheet" href="../css/buttons.css"> 
+    
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+           emailjs.init("y2rXjrB5vas5Z9aAq");//Public_Key..
+        })();
+     </script>
+     <script>
+        function sendemail () {
+
+            
+            if(document.getElementById("number").value==""||document.getElementById("name").value==""||document.getElementById("email").value ==""||document.getElementById("message").value ==""){
+                alert('please fill the form before submit !!')
+                if(document.getElementById("name").value==""){
+                    document.getElementById("name").style.border='2px solid red'
+                }else{
+                    document.getElementById("name").style.border='1px solid #ccc' 
+                }
+                if(document.getElementById("email").value ==""){
+                    document.getElementById("email").style.border='2px solid red'
+                }else{
+                    document.getElementById("email").style.border='1px solid #ccc' 
+                }
+                if(document.getElementById("number").value ==""){
+                    document.getElementById("number").style.border='2px solid red'
+                }else{
+                    document.getElementById("number").style.border='1px solid #ccc' 
+                }
+                if(document.getElementById("message").value ==""){
+                    document.getElementById("message").style.border='2px solid red'
+                }else{
+                    document.getElementById("message").style.border='1px solid #ccc' 
+                }
+
+            }
+            
+            else{
+                
+                var email = document.getElementById("email").value;
+                var emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+                if(emailPattern.test(email)){
+                    
+
+                
+                    var templateParams = {
+                        name: document.getElementById("name").value,
+                        email: document.getElementById("email").value,
+                        number: document.getElementById("number").value,
+                        message: document.getElementById("message").value,
+                
+                    };
+
+        
+                    emailjs.send('service_p0p9p8q', 'template_e6vbrje', templateParams) //Service_Key  Template_Key   Parameter
+                        .then((res)=>{
+                            let conf= confirm('Are you conform to send this form?')
+                            if(conf==true){
+                                alert('your sms sent successfully..')
+                            }
+                            else{
+                                alert('please fill form again!..')
+                            }
+                            document.getElementById("name").value="" ;
+                            document.getElementById("email").value ="" ;
+                            document.getElementById("number").value ="" ;
+                            document.getElementById("message").value ="";
+
+                            document.getElementById("name").style.border='1px solid #ccc'
+                            document.getElementById("email").style.border='1px solid #ccc'
+                            document.getElementById("number").style.border='1px solid #ccc'
+                            document.getElementById("message").style.border='1px solid #ccc'
+                        })
+                        .catch((err)=>alert('failed..',err));
+                            name==""
+                            email==""
+                            number==""
+                            message==""
+                    }
+                    else{
+                        alert('please enter valid email address.')
+                        document.getElementById("email").style.color='red'
+                        document.getElementById("email").style.border='1px solid red'
+                        document.getElementById("message").style.border='1px solid #ccc' 
+                        document.getElementById("name").style.border='1px solid #ccc' 
+                        document.getElementById("number").style.border='1px solid #ccc' 
+                    }
+
+        }
+        
+        }
+    </script>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <h1><a style="color: white;text-decoration: none;" href="/">My Portfolio</a></h1>
+
+        <!---------------------- This nav 139 to 154 for lardge display ------------------------->
+        <ul class="nav-ul">
+            <li class="nav-li"><a class="nav-a" href="/">Home</a></li>
+            <li class="nav-li"><a class="nav-a" href="/about">About</a></li>
+            <li class="nav-li" id="nav-drop-down">
+                <button>Service's</button>
+                        <!------------------ drop services for lardge display ----------------->
+                <ul class="nav-drop-ul">
+                    <li class="nav-drop-li"><a onclick="alert('Oh Sorry! i am working on it')" class="nav-a" href="#">Frontend </a></li>
+                    <li class="nav-drop-li"><a onclick="alert('Oh Sorry! i am working on it')" class="nav-a" href="#">Backend </a></li>
+                    <li class="nav-drop-li"><a onclick="alert('Oh Sorry! i am working on it')" class="nav-a" href="#">Landing page</a></li>
+                    <li class="nav-drop-li"><a onclick="alert('Oh Sorry! i am working on it')" class="nav-a" href="#">Hosting </a></li>
+                </ul>
+            </li>
+            <li class="nav-li"><a class="nav-a" href="/project">Projects</a></li>
+            <li class="nav-li"><a class="nav-a" href="#myskill">experience</a></li>
+            <li class="nav-li"><a class="nav-a" href="#contact">Contact us</a></li>
+        </ul>
+        <!--------------- when width less then 700px nav will 155 to 170 --------------->
+       <input id="click-check" style="display: none;" type="checkbox">
+        
+                <label for="click-check">
+                    <span id="click">&#8801</span>
+                </label>
+                <div class="nav-pop">
+                    <label for="click-check">
+                        <span id="click">x</span>
+                    </label>
+                    <div class="nav-pop-ele">
+                        <a class="pop-link" href="/">Home</a>
+                        <a class="pop-link" href="/about">About</a>
+                        <div><button onclick="moreService()" style="font-size: 25px; padding: 10px 0;" >Service's</button>
+                            <div id="nav-pop">
+                                <a class="nav-link" onclick="alert('I am working on it !')" href="#">Frontend</a>
+                                <a class="nav-link" onclick="alert('I am working on it !')" href="#">Backend</a>
+                                <a class="nav-link" onclick="alert('I am working on it !')" href="#">Hosting</a>
+                            </div>
+                            
+                        </div>
+                        <a class="pop-link" href="/project">Projects</a>
+                       <a class="pop-link" href="#myskill">experience</a>
+                        <a class="pop-link" href="#contact">Contact us</a>
+                    </div>
+                    <div class="nav-social-link">
+                        <a href="https://www.facebook.com/profile.php?id=100023095325912" class="fa fa-facebook" target="_blank"></a>
+                        <a href="https://twitter.com/" class="fa fa-twitter" target="_blank"></a>
+                        <a href="https://www.instagram.com/surajmehra221/" class="fa fa-instagram" target="_blank"></a>
+                        <a href="https://www.linkedin.com/in/suraj-singh-967404239/" class="fa fa-linkedin" target="_blank"></a>
+                        <a href="https://www.youtube.com/channel/UCL1zYuKt7CIgT-ctPkf5wNA" class="fa fa-youtube" target="_blank"></a>
+                        <a href="https://github.com/" class="fa upwork" target="_blank"></a>
+                    </div>
+                </div>
+
+               
+    </nav>
+    <div style="height: 69.2px;">
+
+    </div>
+
+    <section class="main-sec">
+        <div class="text-anim">
+            <div class="img-border" >
+                <div class="img-logo"></div>
+            </div>
+            <h1>Welcome To My Portfolio</h1>
+            <div class="wrapper">
+                <div class="static">I'm a</div>
+                <ul class="dynamic">
+                    <li><span>Youtuber</span></li>
+                    <li><span>Designer</span></li>
+                    <li><span>Developer</span></li>
+                    <li><span>Freelancer</span></li>
+                </ul>
+            </div>
+            <p class="para-cover">I appreciate you for visit my Portfolio page... <br> <br>I'm<span style="color: rgb(255, 59, 59);"> Suraj</span> , Web Development is my passion. I have rich experience in website design and building and customization <br> also i am good at Hosting setup...
+                <br>
+                <div class="cover-btn">
+                <a id="btn" class="ancher common-btn" href="/about">See my work</a>
+                <a class="ancher common-btn" href="https://www.fiverr.com/surajmehra221" target="_blank">Hire me</a>
+                <!-- <a id="btn-cont"  class="ancher btn-sm" href="#contact" target="_parent">Contact Me</a> -->
+                </div>
+                </p>
+        </div>
+            <!-- <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,64L40,53.3C80,43,160,21,240,10.7C320,0,400,0,480,48C560,96,640,192,720,208C800,224,880,160,960,154.7C1040,149,1120,203,1200,234.7C1280,267,1360,277,1400,282.7L1440,288L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg> -->
+            <!-- <svg style="position:absolute; bottom:0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,128L80,160C160,192,320,256,480,266.7C640,277,800,235,960,234.7C1120,235,1280,277,1360,298.7L1440,320L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg> -->
+    </section>
+    <div class="about-me">
+        <svg style="top: 0;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1c1c48" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,160C384,139,480,117,576,101.3C672,85,768,75,864,96C960,117,1056,171,1152,181.3C1248,192,1344,160,1392,144L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+        <div class="about">
+            <h3>About Me</h3>
+            <!-- Meet Suraj, a talented and experienced website developer with a passion for creating exceptional online experiences. With a BCA degree and three years of hands-on industry experience, Suraj brings a strong foundation in web development and a deep understanding of programming languages like HTML, CSS, and JavaScript. Suraj's expertise extends to responsive design, backend development, and database management. Meticulous attention to detail, strong problem-solving skills, and a drive for continuous learning make Suraj a valuable asset to any web development team. If you're seeking a dedicated and skilled professional who can bring your web projects to life, Suraj is the perfect choice to deliver outstanding results. -->
+            <p>Suraj Singh Mehra, a talented BCA graduate of 2023, is a web development expert with a flair for creating stylish and visually appealing web pages.</p><br>
+            <p>A talented and experienced website developer with a passion for creating exceptional online experiences. With a BCA degree and three years of hands-on industry experience, i brings a strong foundation in web development and a deep understanding of programming languages like HTML, CSS, JavaScript, ReactJs, MongoDB and NodeJs. my expertise extends to responsive design, backend development, and database management <a  class style='color: rgb(255, 78, 78);' href="/about">Read_More</a>. </p><br>
+            <p>I am poised to make a significant impact in the future of web development With a strong background in BCA and a knack for crafting unique and stylish designs.</p><br>
+            <h4>Follow On Me:-</h4>
+            
+            <div style="position: relative;">
+                <div class="link">
+                    <a href="https://twitter.com/" class="fa fa-twitter" target="_blank"></a>
+                    <a href="https://www.instagram.com/surajmehra221/" class="fa fa-instagram" target="_blank"></a>
+                    <a href="https://www.linkedin.com/in/suraj-singh-967404239/" class="fa fa-linkedin" target="_blank"></a>
+                    <a href="https://www.youtube.com/channel/UCL1zYuKt7CIgT-ctPkf5wNA" class="fa fa-youtube" target="_blank"></a>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="cover"></div>
+        <svg style="bottom: 0;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1a1a3f" fill-opacity="1" d="M0,320L80,298.7C160,277,320,235,480,224C640,213,800,235,960,213.3C1120,192,1280,128,1360,96L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+    </div>
+    <div style="background-color: #1a1a3f; color: white; padding-bottom: 100px;">
+        <div style="width: 80%; margin: auto; margin-bottom: 180px;" >
+            <div>
+                <h1 id="myskill" style="text-align: center;">MY</h1>
+                <div style="text-align: center;">Here is my skills to represent my Expertise</div>
+            </div>
+            <div class="skill-flex">
+                <div class="bar-part">
+                    <div class="info-skill">
+                        <div class="info">
+                            <h3>HTML</h3>
+                            <span>90%</span>
+                        </div>
+                        <div class="bar">
+                            <div class="bar-skill html"></div>
+                        </div>
+                    </div>
+                    <div class="info-skill">
+                        <div class="info">
+                            <h3>CSS</h3>
+                            <span>95%</span>
+                        </div>
+                        <div class="bar">
+                            <div class="bar-skill css"></div>
+                        </div>
+                    </div>
+                    <div class="info-skill">
+                        <div class="info">
+                            <h3>JavaScript</h3>
+                            <span>80%</span>
+                        </div>
+                        <div class="bar">
+                            <div class="bar-skill js"></div>
+                        </div>
+                    </div>
+                    <div class="info-skill">
+                        <div class="info">
+                            <h3>Node Js</h3>
+                            <span>75%</span>
+                        </div>
+                        <div class="bar">
+                            <div class="bar-skill nodejs"></div>
+                        </div>
+                    </div>
+                    <div class="info-skill">
+                        <div class="info">
+                            <h3>Express Js</h3>
+                            <span>80%</span>
+                        </div>
+                        <div class="bar">
+                            <div class="bar-skill express"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bar-part">
+                    <div class="info-skill">
+                        <div class="info">
+                            <h3>React</h3>
+                            <span>73%</span>
+                        </div>
+                        <div class="bar">
+                            <div class="bar-skill react"></div>
+                        </div>
+                    </div>
+                    <div class="info-skill">
+                        <div class="info">
+                            <h3>Bootstrap</h3>
+                            <span>98%</span>
+                        </div>
+                        <div class="bar">
+                            <div class="bar-skill bootstrap"></div>
+                        </div>
+                    </div>
+                    <div class="info-skill">
+                        <div class="info">
+                            <h3>World Press</h3>
+                            <span>70%</span>
+                        </div>
+                        <div class="bar">
+                            <div class="bar-skill wp"></div>
+                        </div>
+                    </div>
+                    <div class="info-skill">
+                        <div class="info">
+                            <h3>MERN Stack</h3>
+                            <span>73%</span>
+                        </div>
+                        <div class="bar">
+                            <div class="bar-skill mern"></div>
+                        </div>
+                    </div>
+                    <div class="info-skill">
+                        <div class="info">
+                            <h3>Mongo DB</h3>
+                            <span>88%</span>
+                        </div>
+                        <div class="bar">
+                            <div class="bar-skill mongodb"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h1 id="myexperience" style="text-align: center;">MY</h1>
+            <div style="text-align: center;">Here is my personal experience after working these framwork</div>
+        </div>
+        <div class="pre-experience">
+            <div class="experience">
+                <div class="development development-fr"></div>
+                <h2 class="text-al">Frontend Development</h2>
+                <p class="text-al">
+                    As an experienced frontend developer, you possess a valuable skill set that combines creativity and technical expertise. Your proficiency in HTML, CSS, and JavaScript enables you to craft visually appealing and interactive user interfaces.</p>
+                <div style="padding: 20px 0;" class="text-al"><a class="common-btn" href="#">Learn More <span></span></a></div>
+            </div>
+            <div class="experience">
+                <div class="development development-bk"></div>
+                <h2 class="text-al">Backend Development</h2>
+                <p class="text-al">I have skilled with backend developer with two years of expertise in Node.js! With a strong command over server-side technologies, I has successfully built robust and scalable web applications..</p>
+                <div style="padding: 20px 0;" class="text-al"><a class="common-btn" href="#">Learn More <span></span></a></div>
+            </div>
+            <div class="experience">
+                <div class="development development-re"></div>
+                <h2 class="text-al">Responsive Designing</h2>
+                <p class="text-al">I talented responsive web developer with two years of industry experience! With a keen eye for design and a deep understanding of HTML, CSS, and JavaScript, i creates stunning websites that seamlessly adapt to any device or screen size.</p>
+                <div style="padding: 20px 0;" class="text-al"><a class="common-btn" href="#">Learn More <span></span></a></div>
+            </div>
+        </div>
+
+
+        <div>
+            <h1 id="contact" style="text-align: center; margin-top: 40px;">Contact</h1>
+            <div style="text-align: center;">I appreciate you for visit my Portfolio page</div>
+        </div>
+
+        <div>   
+                <!-- <iframe src="https://www.google.c  om/maps/embed?pb=!1m14!1m12!1m3!1d2209.51398626468!2d79.90025185306396!3d29.947807479163536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1687187485514!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                <div >
+                    <div class="contact-form">
+                        <div>
+                            <label >Enter Your Name</label><br>
+                            <input class="input-box" id="name" name="name" type="text">
+                        </div><br>
+                        <div>
+                            <label >Enter your email</label><br>
+                            <input class="input-box" id="email" name="email" type="email">
+                        </div><br>
+                        <div>
+                            <label >Enter mobile no.</label><br>
+                            <input class="input-box" id="number" name="number" type="number">
+                        </div><br>
+                        <div>
+                            <label >Your message</label><br>
+                            <textarea type="text" class="input-box" id="message" name="message" id=""  rows="9"></textarea>
+                        </div><br>
+                        <button onclick="sendemail()" class="send-btn">Send</button>
+                   </div>
+                </div>
+        </div>    
+</div>
+
+
+<footer style="background-color: #1a1a3f;padding-bottom: 50px;">
+    <p class="footer-copy">Copyright &copy; 2023 All rights reserved | This portfolio is made by Surya❤️</p>
+    <div style="width: 100%; text-align: center;position: static;" class="link">
+        <a href="https://twitter.com/" style="background: #4b4b7a; color: white;" class="fa fa-twitter" target="_blank"></a>
+        <a href="https://www.instagram.com/surajmehra221/"  style="background: #4b4b7a; color: white;"  class="fa fa-instagram" target="_blank"></a>
+        <a href="https://www.linkedin.com/in/suraj-singh-967404239/"  style="background: #4b4b7a; color: white;"  class="fa fa-linkedin" target="_blank"></a>
+        <a href="https://www.youtube.com/channel/UCL1zYuKt7CIgT-ctPkf5wNA"  style="background: #4b4b7a; color: white;"  class="fa fa-youtube" target="_blank"></a>
+        
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <script>
+        
+        function moreService(){
+            let nav_pop = document.getElementById('nav-pop');
+            if(nav_pop.style.display=='flex'){
+                nav_pop.style.display='none'
+            }
+            else{
+                nav_pop.style.display='flex'
+            }
+        }
+    </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

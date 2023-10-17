@@ -1,0 +1,38 @@
+.common-btn{
+    color: white;
+    text-decoration: none;
+    background: #d54b4b;
+    padding: 14px;
+    /* border-radius: 4px; */
+    font-size: 14px;
+    margin: 0 5px;
+    transition: all .2s linear;
+}
+.cover-btn{
+    margin-top: 40px;
+}
+.common-btn:hover{
+    background: #ff0000;
+    box-shadow: 0px 0px 25px 2px #ff0000;
+    
+}
+.text-al{
+    text-align: center;
+}
+.send-btn{
+    padding: 8px;
+    border: none;
+    background: #d54b4b;
+    color: white;
+    border-radius: 50px;
+    width: 100px;
+    cursor: pointer;
+}
+.send-btn:hover{
+    background: #cd6868;
+
+}
+.btn-pdf-property{
+    padding: 12px;
+    text-decoration: none;
+}

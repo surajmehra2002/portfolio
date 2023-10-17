@@ -1,0 +1,122 @@
+@media screen and (max-width: 600px){
+       
+    #myVideo{
+        width: auto;
+        max-width: 470px;
+    }
+    
+    .nav-pop {
+        /* bottom: -90vh; */
+        position: absolute;
+        /* background-color: #2d4265; */
+        background-color: #080707;
+        /* width: 450px; */
+        top: 0;
+        left: 600px;
+        z-index: 500;
+        display: block;
+        /* height: 100%; */
+        height: 90vh;
+        margin: 25px 25px;  
+        padding: 25px 25px;
+        border-radius: 8px;
+       
+        transition: all .2s ease-out;
+    }
+    .cover{
+        display: block;
+    }
+    .main-sec {
+        background: rgb(28, 28, 72);
+        height: 905px;
+    }
+    .skill-flex {
+        display: block;
+    }
+    
+element.style {
+}
+.bar-part {
+    width: auto;
+    display: block;
+}
+    
+element.style {
+}
+.experience {
+    width: auto;
+    margin: 25px 0;
+}
+    .pre-experience {
+        display: block;
+    }
+    
+    .about {
+        width: 100%;
+        text-align: center;
+        /* margin: 0 10px; */
+    }
+    .cover{
+        box-shadow: none;
+        width: 100%;
+    }
+    .about-me {
+        flex-direction: column-reverse;
+        height: 790px;
+        padding-top: 15px;
+        /* height: auto; */
+    }
+    .para-cover {
+        text-align: center;
+    }
+    .text-anim h1 {
+        color: white;
+        font-size: 45px;
+        max-width: 375px;
+        text-align: center;
+    }
+    .text-anim{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    right: 5%;
+    }
+
+    .main-sec::before {    
+        background-position: bottom;
+        background-size: 80%;
+        bottom: 10%;
+        /* background-attachment: fixed; */
+    }
+    #click {
+    display: inline-block;
+    margin: -25px;
+    float: right;
+    padding-right: 20px;
+    padding-top: 7px;
+    }
+    
+    .nav-ul{
+        display: none;
+    }
+    .backimg{
+        display: none
+    }
+    .content {
+        position: absolute;
+        bottom: 0;
+        color: #f1f1f1;
+        width: 100%;
+        padding: 15px;
+        background: none;
+        text-align: right;
+    }
+    #about-name {
+        font-size: 105px;
+    }
+
+
+    }

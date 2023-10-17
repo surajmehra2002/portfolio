@@ -1,0 +1,197 @@
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+
+        .navbar{
+            background-color: rgb(28, 28, 72);
+            padding: 20px 30px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+        .nav-ul{
+            display: flex;
+            list-style: none;
+            float: right;
+        }
+        .navbar button{
+            background:none;
+            color: white;
+            border: none;
+            font-size:16px;
+            cursor: pointer;
+        }
+        /* in the li elements hover property will appliy */
+        #nav-drop-down:hover{
+            .nav-drop-ul{
+                display: block;
+            }
+            .nav-drop-ul:hover{
+                display: block;
+            }
+        }
+        .navbar h1{
+            display: inline;
+            color: white;
+        }
+
+        .nav-li{
+            padding: 5px 15px;
+            
+        }
+        .navbar ul li a{
+            color: white;
+            text-decoration: none;
+        }
+        .nav-drop-ul {
+            display: none;
+            background-color: rgb(28, 28, 72);
+            padding: 10px;
+            position: absolute;
+            top: 27px;
+            left: 4px;
+            border-top: 2px solid white;
+            /* box-shadow: 0px -5px 7px 0px black; */
+        }
+        #click{
+            display:none ;
+            font-size: 40px;
+            color: white;
+        }
+        .nav-drop-li{
+            list-style: none;
+            margin: 12px 0;
+            width: 80px;
+        }
+        #nav-drop-down{
+            position: relative;
+        }
+        .nav-a:hover{
+            color: #f47878;
+            border-bottom: 2px solid;
+            padding-bottom: 3px;
+        }
+
+        .nav-pop {
+            bottom: -90vh;
+            position: absolute;
+            background-color: #2d4265;
+            width: -webkit-fill-available;
+            top: 0;
+            left: 600px;
+            z-index: 50;
+            display: none;
+            height: -webkit-fill-available;
+            margin: 25px 25px;
+            padding: 25px 25px;
+            border-radius: 8px;
+           
+            transition: all .2s ease-out;
+        }
+
+
+        #click-check:checked~.nav-pop{
+            /* overflow: hidden; */
+            left: 0;       
+        }
+        .nav-pop-ele{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: auto;
+            align-items: center;
+            justify-content: center;
+            /* height: -webkit-fill-available; */
+
+        }
+        #nav-pop{
+            display: none;
+            flex-direction: column;
+        }
+        .pop-link {
+            padding: 10px 0px;
+            color: white;
+            text-decoration: none;
+            font-size: 25px;
+        }
+        
+        .nav-link{
+            text-decoration: none;
+            color: #b7b7b7;
+            font-size: 19px;
+            padding: 5px 0;
+        }
+        .nav-social-link{
+            position: absolute;
+            bottom: 20px;
+            z-index: 10;
+            left: 0;
+            right: 0;
+            text-align: center;
+                }
+        .fa {
+            padding: 12px;
+            font-size: 20px;
+            width: 45px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 50px;
+            }
+
+            .fa:hover {
+                opacity: 0.7;
+            }
+
+            .fa-facebook {
+            background: #3B5998;
+            color: white;
+            }
+
+            .fa-twitter {
+            background: #55ACEE;
+            color: white;
+            }
+
+            .fa-instagram {
+            background:  #125688;
+            color: white;
+            }
+
+            .fa-linkedin {
+            background: #007bb5;
+            color: white;
+            }
+
+            .fa-youtube {
+            background: #bb0000;
+            color: white;
+            }
+            .fa-youtube-ft{
+                background: #4b4b7a;
+                color: white;
+            }
+            .upwork{
+                background-color: #55ACEE;
+                width: 45px;
+                color: white;
+            }
+            .upwork::before{
+                content: "\f09b";
+            }
+            .footer-copy{
+                text-align: center;
+                color: white;
+                font-size: 14px;
+                padding-top: 30px;
+            }
+            
+        

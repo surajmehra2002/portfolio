@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <a onclick='alert("lskdjf")'href="#">jsl</a>
+    <form id="videoForm">
+        <input type="file" id="videoInput" accept="video/*" required>
+        <button type="submit">submit</button>
+    </form>
+
+    <script>
+        const fs = require('fs');
+
+        // Example route handler using Express.js
+        app.post('/upload', (req, res) => {
+        const videoFile = req.files.videoFile; // Assuming you're using a file upload library like Multer
+
+        // Assuming you want to save the video file to a specific location on the server
+        const filePath = './uploads/' + videoFile.name;
+
+        videoFile.mv(filePath, function(err) {
+            if (err) {
+            // Handle the error
+            console.error(err);
+            return res.status(500).send(err);
+            }
+
+            // File saved successfully
+            res.send('File uploaded and saved successfully!');
+        });
+        });
+
+
+    </script>
+</body>
+</html>
